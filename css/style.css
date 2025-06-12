@@ -4,7 +4,7 @@
   --secondryColor: #28197b;
   --thirdColor: #f082a3;
   --textGreyColor: #797979;
-  --mainDuration: 0.3s;
+  --mainDuration: 200ms;
 }
 /* End Variable */
 /* Start Global Rules */
@@ -524,3 +524,166 @@ a {
   margin-top: 54px;
 }
 /* End Productes */
+/* Start Read More button */
+.read-more{
+  display: block;
+  margin: 64px auto 0;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--mainColor);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 7px 43px;
+  cursor: pointer;
+}
+/* End Read More button */
+/* Start Contact us */
+.contact {
+  background-color: var(--mainColor);
+  margin-top: 102px;
+  padding: 57px 0;
+}
+.contact .container{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 768px){
+  .contact .container{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.contact .container > p{
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  line-height: 1.5;
+  width: 430px;
+}
+@media (max-width: 768px){
+  .contact .container > p{
+  font-size: 22px;
+  text-align: center;
+}
+}
+@media (max-width: 991px){
+  .contact .container > p{
+  font-size: 22px;
+}
+}
+.contact .container .email{
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.contact .container .email input:first-child{
+  padding: 15px 24px;
+  flex: 1;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  background-color: var(--secondryColor);
+}
+.contact .container .email input:first-child::placeholder{
+  font-size: 14px;
+  color: var(--textGreyColor);
+  font-weight: 500;
+}
+.contact .container .email input:last-child{
+  padding: 15px 23px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  background-color: white;
+  color: var(--mainColor);
+}
+@media (max-width: 768px){
+  .contact .container .email{
+    flex-direction: column;
+    width: 100%;
+  }
+  .contact .container .email input:first-child::placeholder{
+    text-align: center;
+  }
+}
+.contact .container .info p{
+  margin-top: 7px;
+  font-size: 12px;
+  color: white;
+}
+/* End Contact us */
+/* Start Footer */
+.footer {
+  padding: 44px 0;
+  background-color: var(--secondryColor);
+}
+.footer .container .categories{
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 768px){
+  .footer .container .categories{
+    flex-wrap: wrap;
+  }
+}
+.footer .container ul li{
+  margin-bottom: 6px;
+  padding-bottom: 5px;
+  width: fit-content;
+  transition: var(--mainDuration);
+}
+.footer .container ul li a{
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+.footer .container ul li a:not(.follow-us):hover{
+  border-bottom: 1px solid var(--mainColor);
+  color: var(--mainColor);
+}
+.footer .container .social{
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  margin-top: 10px;
+}
+.footer .container .social li{
+  cursor: pointer;
+  transition: var(--mainDuration);
+}
+.footer .container .social li:hover{
+  color: var(--mainColor);
+  transform: scale(1.1);
+}
+.footer .container .categories h1{
+  font-family: "Segoe UI";
+  font-size: 18px;
+  font-weight: 900;
+  color: white;
+  cursor: pointer;
+}
+.footer .container .categories h1:hover{
+  color: var(--mainColor);
+}
+@media (max-width: 768px){
+  .footer .container .categories h1{
+    width: 100%;
+    order: -1;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+.footer .container .copy-right{
+  margin-bottom: -30px;
+  color: white;
+  opacity: 30%;
+  font-size: 12px;
+  text-align: center;
+}
+/* End Footer */
