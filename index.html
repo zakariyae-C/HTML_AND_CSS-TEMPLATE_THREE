@@ -24,8 +24,8 @@
             </span>
             <i class="fa-solid fa-magnifying-glass"></i>
             <ul class="nav">
-                <li><a href="#">تسجيل الدخول</a></li>
-                <li><a href="#">انشاء حساب</a></li>
+                <li><a href="#" id="login-form-open">تسجيل الدخول</a></li>
+                <li><a href="#" id="signup-form-open">انشاء حساب</a></li>
                 <li><a href="#">تصفح</a></li>
                 <li><a href="#">صفقة اليوم</a></li>
                 <li><a href="#">خدمة العملاء</a></li>
@@ -37,7 +37,7 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
             <div class="logo">
-                <img src="assets/image/logo.png" alt="">
+                <img src="assets/image/logo.png" alt="Logo">
             </div>
         </div>
     </div>
@@ -67,6 +67,54 @@
         </div>
     </div>
     <!-- End Landing -->
+    <!-- Start Login Signup -->
+    <div class="login-signup">
+        <div class="form-container">
+            <i class="fa-solid fa-xmark form-close"></i>
+            <!-- Start Login-form -->
+            <div class="form login-form">
+                <div class="logo">
+                    <img src="assets/image/logo.png" alt="">
+                </div>
+                <form action="#">
+                    <div class="input-box">
+                        <input type="email" placeholder="البريد الإلكتروني" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" placeholder="كلمة السر" required>
+                        <i class="fa-regular fa-eye-slash pw-hide"></i>
+                    </div>
+                    <p class="forgot-password">نسيت كلمة السر</p>
+                    <button class="btn">تسجيل الدخول</button>
+                    <div class="havenot-account">ليس لديك حساب؟ <a href="#" id="signup">انشاء حساب</a></div>
+                </form>
+            </div>
+            <!-- End Login-form -->
+            <!-- Start signup-form -->
+            <div class="form signup-form">
+                <div class="logo">
+                    <img src="assets/image/logo.png" alt="">
+                </div>
+                <form action="#">
+                    <div class="input-box">
+                        <input type="email" placeholder="البريد الإلكتروني" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" placeholder="كلمة السر" required>
+                        <i class="fa-regular fa-eye-slash pw-hide"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" placeholder="تأكيد كلمة السر" required>
+                        <i class="fa-regular fa-eye-slash pw-hide"></i>
+                    </div>
+                    <button class="btn">انشاء حساب</button>
+                    <div class="havenot-account">لديك حساب؟ <a href="#" id="login">تسجيل الدخول</a></div>
+                </form>
+            </div>
+            <!-- End signup-form -->
+        </div>
+    </div>
+    <!-- End Login Signup -->
     <!-- Start Sale -->
     <div class="sale">
         <div class="container">
@@ -398,6 +446,7 @@
         </div>
     </div>
     <!-- End Footer -->
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
