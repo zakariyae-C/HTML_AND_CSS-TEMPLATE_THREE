@@ -16,6 +16,7 @@ window.addEventListener("load", function () {
   }, 2000);
 });
 /* End Show login automaticaly */
+/*Start Show login and signup pop-up*/
 loginFormBtn.addEventListener("click", () => {
   if (loginSignup.classList.length === 1) {
     loginSignup.classList.add("show-login");
@@ -28,18 +29,22 @@ signupFormBtn.addEventListener("click", () => {
     document.body.style.overflow = "hidden";
   }
 });
+/*End Show login and signup pop-up*/
+/*Start CLick on close button to close the form*/
 formCloseBtn.addEventListener("click", () => {
   loginSignup.classList.remove("show-login", "show-signup");
   document.body.style.overflow = "";
 });
-
+/*End CLick on close button to close the form*/
+/*Start Click outside to close this pop-up*/
 loginSignup.addEventListener("click", (event) => {
   if (event.target === loginSignup) {
     loginSignup.classList.remove("show-login", "show-signup");
     document.body.style.overflow = "";
   }
 });
-
+/*End Click outside to close this pop-up*/
+/*Start Change from login to signup and the opposit is right*/
 signupBtn.addEventListener("click", (event) => {
   event.preventDefault();
   formContainer.classList.add("active");
@@ -48,7 +53,7 @@ loginBtn.addEventListener("click", (event) => {
   event.preventDefault();
   formContainer.classList.remove("active");
 });
-
+/*End Change from login to signup and the opposit is right*/
 /* Start pwShowHide */
 pwShowHide.forEach((icon) => {
   icon.addEventListener("click", () => {
