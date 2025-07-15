@@ -47,6 +47,38 @@ a {
   }
 }
 /* End Global Rules */
+/* Start to top button */
+button#up{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 5px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--mainColor);
+  color: white;
+  cursor: pointer;
+  transition: all 300ms ease-out;
+  display: none;
+}
+button#up:hover{
+  animation-name: anim;
+  animation-duration: 2s;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+@keyframes anim {
+  0%{
+    transform: rotate(-10deg) translateY(-10px);
+  }
+  50% {
+    transform: rotate(20deg) translateY(-10px);
+  }
+  to {
+    transform: rotate(-10deg) translateY(-10px);
+  }
+}
+/* End to top button */
 /* Start Header */
 .header {
   background-color: white;

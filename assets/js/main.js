@@ -70,7 +70,25 @@ pwShowHide.forEach((icon) => {
 /* End pwShowHide */
 
 /* Start Show nav burgerMenu */
-document.querySelector(".burger-menu").addEventListener("click", () => {
-  document.querySelector(".burger-menu").classList.toggle("active");
+const burgerMenu = document.querySelector(".burger-menu");
+burgerMenu.addEventListener("click", () => {
+  burgerMenu.classList.toggle("active");
 });
 /* End Show nav burgerMenu */
+
+/* Start to top button */
+let upBtn = document.getElementById("up");
+window.onscroll = function() {
+  if(window.scrollY >= 50){
+    upBtn.style.display = "block";
+  }else{
+    upBtn.style.display = "none"
+  }
+}
+upBtn.onclick = function(){
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  })
+}
+/* End to top button */
